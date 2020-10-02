@@ -1,0 +1,37 @@
+.process {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.process__container {
+  margin-top: 300px;
+  background-image: url("../../images/326780-P9JGF8-718.png"),
+    linear-gradient(#0000001a, #0000001a);
+  background-blend-mode: overlay;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 100px 0;
+}
+.process div {
+  border: solid black 1px;
+  width: 150px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.process div:hover {
+  background: black;
+  color: white;
+}
+
+.process h3 {
+  font-size: 1.8em;
+}

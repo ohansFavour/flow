@@ -1,0 +1,18 @@
+.begin {
+  text-align: center;
+  margin: 200px 0;
+}
+.begin div {
+  border: solid black 1px;
+  padding: 10px 20px;
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.begin div:hover {
+  background-color: black;
+  color: white;
+}
+.begin h3 {
+  font-size: x-large;
+}

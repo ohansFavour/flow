@@ -1,0 +1,15 @@
+.last {
+  padding-left: 2rem;
+  height: 40px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+
+@media screen and (min-width: 768px) {
+  .left {
+    padding-left: 7rem;
+  }
+}
