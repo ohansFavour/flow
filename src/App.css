@@ -1,7 +1,19 @@
 .App {
   background: url("./images/Dotted cercles (16).png");
 }
+.AppMain {
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.AppForm {
+  background: url("./images/dotted.jpg");
+  background-size: 900px;
+  min-height: 100vh;
+}
 
 * {
   -webkit-tap-highlight-color: transparent;
+  font-family: "Overpass", sans-serif;
 }

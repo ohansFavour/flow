@@ -6,12 +6,13 @@ const Process = () => {
   return (
     <div className="process__container">
       <div className="process">
-        <h3>Be part of the process, register your trade</h3>
+        <h1>ABOUT US</h1>
         <em>
-          We’re fixing how people learn basic vocational jobs. Are you an
-          experienced tradesperson? Join our cause, Register now.
+          LearnWorkNow.ng is a blended learning platform that combines online &
+          offline learning to enable you acquire your desired vocational skill
+          at your own pace no matter how busy your current schedule is.
         </em>
-        <div>Register your trade</div>
+        {/* <div>Register your trade</div> */}
       </div>
     </div>
   );

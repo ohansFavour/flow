@@ -13,8 +13,8 @@ const Footer = () => {
         </div>
         <div className="col__container">
           <div className="col">
-            <span>+44 345 678 903</span>
-            <span> ADOBEXD@MAIL.COM</span>
+            <span>+234 9032770671</span>
+            <span>JOHNOLOYEDE28@GMAIL.COM</span>
             <span>FIND A STORE</span>
           </div>
 
