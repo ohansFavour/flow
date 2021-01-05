@@ -1,7 +1,6 @@
 .video-bg {
   position: relative;
   height: 100vh;
-  // max-height: 800px;
   overflow: hidden;
   margin: 50px 0 80px;
 }
@@ -14,6 +13,7 @@
   margin: 0%;
   height: 100%;
   width: 100%;
+  position: fixed;
 }
 
 #myVideo {
@@ -21,6 +21,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  position: fixed;
 }
 .test__main {
   width: 100%;

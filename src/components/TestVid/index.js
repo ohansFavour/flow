@@ -9,14 +9,14 @@ import Laptop from "../../images/pexels-ketut-subiyanto-4349950.png";
 import Woman from "../../images/pexels-rfstudio-1.png";
 import Electronic from "../../images/pexels-caio-1.png";
 
-import Vid from "../../videos/rain.mp4";
+import Vid from "../../videos/learn-work.mp4";
 import "./testVid.scss";
 
 const TestVid = () => {
   return (
     <Scroll
       render={({ x, y }) => {
-        if (y < 150) {
+        if (y < 200) {
           return (
             <div className="video-bg">
               <div className="overlay-bg"></div>
@@ -24,7 +24,7 @@ const TestVid = () => {
                 <source src={Vid} type="video/mp4" />
                 Your browser does not support HTML5 video.
               </video>
-              <div className="test__main" style={{ opacity: `${1 - y / 150}` }}>
+              <div className="test__main" style={{ opacity: `${1 - y / 200}` }}>
                 <div>
                   <h1>Kick-start your vocational career</h1>
                   <p>
@@ -41,16 +41,16 @@ const TestVid = () => {
         } else {
           return (
             <div className="section-two">
-              <Fade delay={500} bottom duration={2000}>
+              <Fade delay={500} bottom duration={4000}>
                 <img src={Barber} alt="" className="first" />
               </Fade>
-              <Fade delay={1000} bottom duration={2000}>
+              <Fade delay={1000} bottom duration={4000}>
                 <img src={Laptop} alt="" className="second" />
               </Fade>
-              <Fade delay={1500} bottom duration={2000}>
+              <Fade delay={1500} bottom duration={4000}>
                 <img src={Woman} alt="" className="third" />
               </Fade>
-              <Fade delay={2000} bottom duration={2000}>
+              <Fade delay={2000} bottom duration={4000}>
                 <img src={Electronic} alt="" className="fourth" />
               </Fade>
 

@@ -104,31 +104,35 @@ const Form = ({ history }) => {
         />
         <label htmlFor="mr">Mr</label>
         <br />
-        <input
-          type="radio"
-          id="other"
-          name="gender"
-          value="other"
-          onChange={(e) => {
-            if (e.target.checked) {
-              setTitle("");
-              setEnableOtherTitle(true);
-            } else {
-              setEnableOtherTitle(false);
-            }
-          }}
-        />
-        <label htmlFor="other">Other</label>
-        <input
-          type="name"
-          className="otherOption"
-          value={enableOtherTitle ? title : ""}
-          onChange={(e) => {
-            if (enableOtherTitle) {
-              setTitle(e.target.value);
-            }
-          }}
-        />
+        <div className="other-container">
+          <input
+            type="radio"
+            id="other"
+            name="gender"
+            value="other"
+            onChange={(e) => {
+              if (e.target.checked) {
+                setTitle("");
+                setEnableOtherTitle(true);
+              } else {
+                setEnableOtherTitle(false);
+              }
+            }}
+          />
+          <div className="input-other">
+            <label htmlFor="other">Other</label>
+            <input
+              type="name"
+              className="otherOption"
+              value={enableOtherTitle ? title : ""}
+              onChange={(e) => {
+                if (enableOtherTitle) {
+                  setTitle(e.target.value);
+                }
+              }}
+            />
+          </div>
+        </div>
         <br />
         <br />
         <p className="required">
@@ -252,31 +256,36 @@ const Form = ({ history }) => {
         />
         <label htmlFor="Welding">Welding & Fabrication</label>
         <br />
-        <input
-          type="radio"
-          id="Other"
-          name="skill"
-          value="Other"
-          onChange={(e) => {
-            if (e.target.checked) {
-              setEnableOtherSkill(true);
-              setSkill("");
-            } else {
-              setEnableOtherSkill(false);
-            }
-          }}
-        />
-        <label htmlFor="Other">Other</label>
-        <input
-          type="name"
-          className="otherOption"
-          value={enableOtherSkill ? skill : ""}
-          onChange={(e) => {
-            if (enableOtherSkill) {
-              setSkill(e.target.value);
-            }
-          }}
-        />
+        <div className="other-container">
+          <input
+            type="radio"
+            id="Other"
+            name="skill"
+            value="Other"
+            onChange={(e) => {
+              if (e.target.checked) {
+                setEnableOtherSkill(true);
+                setSkill("");
+              } else {
+                setEnableOtherSkill(false);
+              }
+            }}
+          />
+          <div className="input-other">
+            <label htmlFor="Other">Other</label>
+
+            <input
+              type="name"
+              className="otherOption"
+              value={enableOtherSkill ? skill : ""}
+              onChange={(e) => {
+                if (enableOtherSkill) {
+                  setSkill(e.target.value);
+                }
+              }}
+            />
+          </div>
+        </div>
         <br />
         <p className="required">Please provide your Phone Number</p>
         <br />
