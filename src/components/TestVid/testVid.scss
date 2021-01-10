@@ -7,8 +7,7 @@
 .overlay-bg {
   background: black;
   top: 0;
-  opacity: 0.7;
-  position: absolute;
+  opacity: 0.3;
   z-index: 1;
   margin: 0%;
   height: 100%;
@@ -68,14 +67,28 @@
     color: white;
   }
 }
-
-.section-two {
+.section-two-cont {
   position: relative;
   width: 100%;
   margin-top: 215px;
   margin-bottom: 100px;
   height: 100vh;
   max-height: 800px;
+}
+.section-two-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // overflow: hidden;
+  border: solid red 1px;
+}
+.section-two {
+  // position: fixed;
+  // top: 0;
+  height: 100%;
+  width: 100%;
+  border: solid blue 1px;
   img {
     width: 20%;
     height: auto;
