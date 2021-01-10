@@ -7,7 +7,7 @@ const Begin = () => {
     <div className="begin">
       <h3>Begin your one of a kind apprenticeship</h3>
       <a href="/sign-up">
-        <button>Sign Up Today</button>
+        <button>Get Started</button>
       </a>
     </div>
   );

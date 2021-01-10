@@ -30,7 +30,7 @@ function App() {
             {/* <Intro /> */}
             <TestVid />
             {/* <Barb /> */}
-            <Steps />
+            {/* <Steps /> */}
             <Process />
             <Begin />
             <Footer />

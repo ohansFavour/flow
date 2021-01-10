@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Center, Heading } from "@chakra-ui/react";
 import Signup from "../../images/signup.svg";
-import Develop from "../../images/develop.svg";
+import Develop from "../../images/stage2.svg";
 import Join from "../../images/join.svg";
 import Step from "../step/step";
 
@@ -19,7 +19,7 @@ const data = [
   {
     title: "Develop your Learning Plan",
     desc:
-      "Our program advisors would contact you through the mediums you selected in your sign-up form and work with you to develop your custom learning plan that is just right for you.",
+      "Work with our program advisors to develop your flexible custom learning plan.",
     image: {
       src: Develop,
       alt: "Develop plan",
@@ -42,14 +42,14 @@ const Steps = () => {
   return (
     <>
       <Center mb="40px">
-        <Heading size="lg" mb="20px" as="h4">
+        <Heading size="lg" mb="50px" as="h4" fontSize={["1.5em", "2.5em"]}>
           How To Get Started
         </Heading>
       </Center>
       <Flex
-        direction={{ base: "column", md: "row" }}
-        justifyContent={{ md: "center" }}
-        alignItems={{ base: "center", md: "unset" }}
+        direction={{ base: "column", lg: "row" }}
+        justifyContent={{ lg: "center" }}
+        alignItems={{ base: "center", lg: "unset" }}
       >
         {data.map((entry, index) => (
           <Step

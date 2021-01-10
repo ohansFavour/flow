@@ -17,12 +17,14 @@ const Form = ({ history }) => {
   const disable = !name || !skill || !number;
 
   const handleTitle = (e) => {
+    setEnableOtherTitle(false);
     if (e.target.checked) {
       setTitle(e.target.value);
     }
   };
 
   const handleSkill = (e) => {
+    setEnableOtherSkill(false);
     if (e.target.checked) {
       setSkill(e.target.value);
     }
@@ -66,7 +68,7 @@ const Form = ({ history }) => {
   return (
     <div className="form-container">
       <LoadingBar ref={ref} color="black" />
-      <h1>Sign Up</h1>
+      <h1>Get Started</h1>
       <form className="form">
         <p className="required">Please provide your name ?</p>
         <input

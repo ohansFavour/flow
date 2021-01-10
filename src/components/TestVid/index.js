@@ -2,7 +2,6 @@ import React from "react";
 import { Scroll } from "react-fns";
 
 import Tada from "react-reveal/Tada";
-import Fade from "react-reveal/Fade";
 
 import Barber from "../../images/edgar-chaparro-m8UvH75I2lI-unsplash.png";
 import Laptop from "../../images/pexels-ketut-subiyanto-4349950.png";
@@ -11,12 +10,13 @@ import Electronic from "../../images/pexels-caio-1.png";
 
 import Vid from "../../videos/learn-work.mp4";
 import "./testVid.scss";
+import Steps from "../Steps";
 
 const TestVid = () => {
   return (
     <Scroll
       render={({ x, y }) => {
-        if (y < 200) {
+        if (y < 300) {
           return (
             <div className="video-bg">
               <div className="overlay-bg"></div>
@@ -24,21 +24,21 @@ const TestVid = () => {
                 <source src={Vid} type="video/mp4" />
                 Your browser does not support HTML5 video.
               </video>
-              <div className="test__main" style={{ opacity: `${1 - y / 200}` }}>
+              <div className="test__main" style={{ opacity: `${1 - y / 300}` }}>
                 <div>
                   <h1>Kick-start your vocational career</h1>
                   <p>
-                    We combine online and offline learning approaches to enable
-                    you acquire your desired vocational skill at your own pace.
+                    Combine online and offline learning to acquire your desired
+                    vocational skill at your own pace.
                   </p>
                   <a href="/sign-up">
-                    <button>Sign Up</button>
+                    <button>Get Started</button>
                   </a>
                 </div>
               </div>
             </div>
           );
-        } else if (y < 1000) {
+        } else if (y < 600) {
           return (
             <div className="section-two-cont">
               <div className="section-two-container">
@@ -49,7 +49,7 @@ const TestVid = () => {
                     alt=""
                     className="first"
                     style={{
-                      left: `calc(((20%  * (${y} - 200)) / 800) - 20%)`,
+                      left: `calc(((20%  * (${y} - 200)) / 400) - 20%)`,
                       top: 0,
                     }}
                   />
@@ -60,7 +60,7 @@ const TestVid = () => {
                     alt=""
                     className="second"
                     style={{
-                      right: `calc(((20%  * (${y} - 200)) / 800) - 20%)`,
+                      right: `calc(((20%  * (${y} - 200)) / 400) - 20%)`,
                       top: 0,
                     }}
                   />
@@ -71,7 +71,7 @@ const TestVid = () => {
                     alt=""
                     className="third"
                     style={{
-                      left: `calc(((20%  * (${y} - 200)) / 800) - 20%)`,
+                      left: `calc(((20%  * (${y} - 200)) / 400) - 20%)`,
                       bottom: 0,
                     }}
                   />
@@ -82,7 +82,7 @@ const TestVid = () => {
                     alt=""
                     className="fourth"
                     style={{
-                      right: `calc(((20%  * (${y} - 200)) / 800) - 20%)`,
+                      right: `calc(((20%  * (${y} - 200)) / 400) - 20%)`,
                       bottom: 0,
                     }}
                   />
@@ -92,14 +92,13 @@ const TestVid = () => {
                     <div>
                       <h1>Kick-start your vocational career</h1>
                       <p>
-                        We combine online and offline learning approaches to
-                        enable you acquire your desired vocational skill at your
-                        own pace.
+                        Combine online and offline learning to acquire your
+                        desired vocational skill at your own pace.
                       </p>
-                      <Tada duration={2000}>
+                      <Tada duration={5000}>
                         <div>
                           <a href="/sign-up">
-                            <button>Sign Up</button>
+                            <button>Get Started</button>
                           </a>
                         </div>
                       </Tada>
@@ -110,7 +109,11 @@ const TestVid = () => {
             </div>
           );
         } else {
-          return <></>;
+          return (
+            <div className="stage3">
+              <Steps />
+            </div>
+          );
         }
       }}
     />
