@@ -2,14 +2,12 @@
   background: url("./images/Dotted cercles (16).png");
 }
 .AppMain {
-  max-width: 1600px;
-  margin: 0 auto;
-  position: relative;
+  /* max-width: 1600px; */
 }
 
 .AppForm {
   background: url("./images/dotted.jpg");
-  background-size: 900px;
+  background-size: 100vw;
   min-height: 100vh;
 }
 
