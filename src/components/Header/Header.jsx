@@ -13,7 +13,7 @@ const Header = ({ notHome, history }) => {
   return (
     <Scroll
       render={({ x, y }) => {
-        if (y < 300 && !notHome) {
+        if (y < 1000 && !notHome) {
           return (
             <div
               className="header"
@@ -29,7 +29,7 @@ const Header = ({ notHome, history }) => {
                   <img
                     src={Logo}
                     alt="logo"
-                    onClick={() => history.push("/sign-up")}
+                    onClick={() => history.push("/signup")}
                   />
                 </span>
                 {/* </a> */}
@@ -39,8 +39,8 @@ const Header = ({ notHome, history }) => {
                 <a href="/">
                   <span>Home</span>
                 </a>
-                <a href="/sign-up">
-                  <span>Get Started</span>
+                <a href="/signup">
+                  <span>Sign Up</span>
                 </a>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Header = ({ notHome, history }) => {
                   <img
                     src={Logo}
                     alt="logo"
-                    onClick={() => history.push("/sign-up")}
+                    onClick={() => history.push("/signup")}
                   />
                 </span>
                 {/* </a> */}
@@ -70,7 +70,7 @@ const Header = ({ notHome, history }) => {
                 <a href="/" className="header__vertical">
                   <span>Home</span>
                 </a>
-                <a href="/sign-up">
+                <a href="/signup">
                   <span>Get Started</span>
                 </a>
               </div>

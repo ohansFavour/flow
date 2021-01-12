@@ -14,11 +14,10 @@ const Footer = () => {
         <div className="col__container">
           <div className="col">
             <span>+234 9032770671</span>
-            <span>JOHNOLOYEDE28@GMAIL.COM</span>
-            <span>FIND A STORE</span>
+            <span>INFO@LEARNWORKNOW.NG</span>
           </div>
 
-          <div className="col">
+          {/* <div className="col">
             <span>CONTACT US</span>
             <span> ORDERING & PAYMENT</span>
             <span>FIND A STORE</span>
@@ -26,14 +25,17 @@ const Footer = () => {
             <span>RETURNS</span>
             <span>FAQ</span>
             <span>SHOPPING GUIDE</span>
-          </div>
+          </div> */}
 
           <div className="col">
-            <span>ABOUT ADOBE XD KIT</span>
-            <span> WORK WITH US</span>
+            {/* <span>ABOUT ADOBE XD KIT</span> */}
+            {/* <span> WORK WITH US</span> */}
+            <span>
+              <a href="mailto:info@learnworknow.ng">CONTACT US</a>
+            </span>
             <span>PRIVACY POLICY</span>
-            <span>TERMS AND CONDITIONS</span>
-            <span>PRICE ENQUIRIES</span>
+            {/* <span>TERMS AND CONDITIONS</span>
+            <span>PRICE ENQUIRIES</span> */}
           </div>
         </div>
       </div>

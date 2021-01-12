@@ -30,14 +30,14 @@ function App() {
             {/* <Intro /> */}
             <TestVid />
             {/* <Barb /> */}
-            {/* <Steps /> */}
+            <Steps />
             <Process />
             <Begin />
             <Footer />
             <Last />
           </div>
         </Route>
-        <Route exact path="/sign-up">
+        <Route exact path="/signup">
           <div className="AppForm">
             <Header notHome={true} />
             <Form />

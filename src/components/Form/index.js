@@ -7,14 +7,19 @@ import "./form.scss";
 
 const Form = ({ history }) => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [skill, setSkill] = useState("");
   const [number, setNumber] = useState("");
+  const [confirmNumber, setConfirmNumber] = useState("");
   const [enableOtherTitle, setEnableOtherTitle] = useState(false);
   const [enableOtherSkill, setEnableOtherSkill] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const disable = !name || !skill || !number;
+  const disable = !name || !skill || !number || !confirmNumber;
+  const confirmNumberAlert = !!(
+    confirmNumber.trim() !== number.trim() && confirmNumber
+  );
 
   const handleTitle = (e) => {
     setEnableOtherTitle(false);
@@ -39,9 +44,10 @@ const Form = ({ history }) => {
     formData.append("Title", title);
     formData.append("Skill", skill);
     formData.append("Phone", number);
+    formData.append("Email", email);
 
     try {
-      const response = await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbzb9rbKlX1AG6b3FYY4gmezT6hvZxx-63sIoz5FQlQtqsWhqIM/exec",
         {
           method: "POST",
@@ -50,8 +56,9 @@ const Form = ({ history }) => {
       );
       setLoading(false);
       NotificationManager.success(
-        "Your details have been successfully submitted.",
-        "Success"
+        "Your details have been successfully submitted. Our program advisor would contact you shortly.",
+        "Success",
+        7000
       );
 
       ref.current.complete();
@@ -68,7 +75,7 @@ const Form = ({ history }) => {
   return (
     <div className="form-container">
       <LoadingBar ref={ref} color="black" />
-      <h1>Get Started</h1>
+      <h1>Sign Up</h1>
       <form className="form">
         <p className="required">Please provide your name ?</p>
         <input
@@ -76,6 +83,14 @@ const Form = ({ history }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+
+        <p>Please provide your email ?</p>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <br />
 
         <p>Please how would you like to be addressed ?</p>
         <br />
@@ -299,13 +314,30 @@ const Form = ({ history }) => {
           }}
         />
         <br />
+
+        <p className="required">Please confirm your Phone Number</p>
+        <br />
+        <input
+          type="number"
+          value={confirmNumber}
+          onChange={(e) => {
+            setConfirmNumber(e.target.value);
+          }}
+          style={{
+            borderBottomColor: `${confirmNumberAlert ? "red" : "black"}`,
+          }}
+        />
         <div className="footer">
           <button
             disabled={loading}
             onClick={(e) => {
               if (disable) {
                 e.preventDefault();
-                alert("Please fill required fields");
+                if (number.trim() !== confirmNumber.trim()) {
+                  alert("Please confirm your phone number");
+                } else {
+                  alert("Please fill required fields");
+                }
               } else {
                 handleSubmit(e);
               }
