@@ -9,7 +9,7 @@ const data = [
   {
     title: "Sign Up",
     desc:
-      "Fill out the simple sign-up form. You would provide us with just enough information to get you started.",
+      "Fill out the simple signup form. You would provide us with just enough information to get you started.",
     image: {
       src: Signup,
       alt: "Sign Up",

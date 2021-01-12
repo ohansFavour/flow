@@ -6,8 +6,8 @@ const Begin = () => {
   return (
     <div className="begin">
       <h3>Begin your one of a kind apprenticeship</h3>
-      <a href="/sign-up">
-        <button>Get Started</button>
+      <a href="/signup">
+        <button>Sign up now</button>
       </a>
     </div>
   );
