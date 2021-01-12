@@ -12,7 +12,6 @@ import Six from "../../images/6.png";
 
 import Vid from "../../videos/learn-work.mp4";
 import "./testVid.scss";
-import Steps from "../Steps";
 
 const TestVid = () => {
   return (
@@ -77,8 +76,8 @@ const TestVid = () => {
                   style={{
                     left: `${
                       y < 400
-                        ? `calc(((( 15% + 20% ) * ${y}) / 400) - 20%)`
-                        : `calc(((( 15% + 20% ) * 400) / 400) - 20%)`
+                        ? `calc(((( 8% + 20% ) * ${y}) / 400) - 20%)`
+                        : `calc(((( 8% + 20% ) * 400) / 400) - 20%)`
                     }`,
                     top: `35%`,
                   }}
@@ -122,8 +121,8 @@ const TestVid = () => {
                   style={{
                     right: `${
                       y < 400
-                        ? `calc(((( 15% + 20% ) * ${y}) / 400) - 20%)`
-                        : `calc(((( 15% + 20% ) * 400) / 400) - 20%)`
+                        ? `calc(((( 8% + 20% ) * ${y}) / 400) - 20%)`
+                        : `calc(((( 8% + 20% ) * 400) / 400) - 20%)`
                     }`,
                     top: `35%`,
                   }}

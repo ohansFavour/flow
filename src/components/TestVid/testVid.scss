@@ -30,7 +30,6 @@
 }
 
 .stage3 {
-  border: solid red 1px;
   margin-top: 1500px;
 }
 
@@ -53,6 +52,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 .test__main {
   width: 100%;
@@ -203,18 +203,10 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .section-two {
+@media screen and (max-width: 1024px) {
+  .test-anime {
     img {
       display: none;
     }
-
-    .test__main2 {
-      padding-top: 30px;
-    }
-  }
-
-  .test__main {
-    padding-top: 50px;
   }
 }
