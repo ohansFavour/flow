@@ -38,6 +38,7 @@ const TestVid = () => {
               muted
               loop
               id="myVideo"
+              poster="rgba(0,0,0,0.5)"
               style={{
                 width: `calc((-1 * 100% * ${y} / 300 ) + 100%)`,
                 height: `calc((-1 * 100% * ${y} / 300 ) + 100%)`,
