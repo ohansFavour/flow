@@ -10,11 +10,12 @@
 }
 .process__container {
   margin-top: 300px;
-  background-image: url("../../images/326780-P9JGF8-718.png"),
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  background-image: url("../../images/about.png"),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: left;
   width: 100%;
   box-sizing: border-box;
   padding: 100px 0;

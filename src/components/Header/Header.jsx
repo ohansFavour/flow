@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import "./Header.css";
 
 import Logo from "../../images/Group 12.png";
+import WhiteLogo from "../../images/logo-white.png";
 
 const Header = ({ notHome, history }) => {
   useEffect(() => {
@@ -13,13 +14,13 @@ const Header = ({ notHome, history }) => {
   return (
     <Scroll
       render={({ x, y }) => {
-        if (y < 1000 && !notHome) {
+        if (y < 500 && !notHome) {
           return (
             <div
               className="header"
               style={{
                 backgroundColor: "transparent",
-                color: "white",
+                color: `${y > 15 ? "black" : "white"}`,
                 // marginTop: "20px",
               }}
             >
@@ -27,9 +28,9 @@ const Header = ({ notHome, history }) => {
                 {/* <a> */}
                 <span>
                   <img
-                    src={Logo}
+                    src={y > 15 ? Logo : WhiteLogo}
                     alt="logo"
-                    onClick={() => history.push("/signup")}
+                    onClick={() => history.push("/")}
                   />
                 </span>
                 {/* </a> */}
@@ -71,7 +72,7 @@ const Header = ({ notHome, history }) => {
                   <span>Home</span>
                 </a>
                 <a href="/signup">
-                  <span>Get Started</span>
+                  <span>Sign Up</span>
                 </a>
               </div>
             </div>
