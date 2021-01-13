@@ -145,7 +145,7 @@ const TestVid = () => {
               {/* </Fade> */}
             </div>
             <div
-              className="test__main"
+              className={`test__main ${y > 200 ? "blacken" : "whiten"}`}
               style={{
                 position: `${y > 500 ? "absolute" : "fixed"}`,
                 top: `${y > 500 ? y : 0}`,

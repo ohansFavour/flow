@@ -1,6 +1,11 @@
 .App {
   background: url("./images/Dotted cercles (16).png");
 }
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
 .AppMain {
   /* max-width: 1600px; */
 }
