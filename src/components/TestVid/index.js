@@ -151,7 +151,7 @@ const TestVid = () => {
                 top: `${y > 500 ? y : 0}`,
               }}
             >
-              <div>
+              <div className="main__content">
                 <h1>Kick-start your vocational career</h1>
                 <p>
                   Combine online and offline learning to acquire your desired
