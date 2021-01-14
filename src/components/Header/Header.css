@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   /* background-color: white; */
+  /* border: solid red 1px; */
   z-index: 10000;
 }
 
