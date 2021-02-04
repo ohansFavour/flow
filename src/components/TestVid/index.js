@@ -1,8 +1,6 @@
 import React from "react";
 import { Scroll } from "react-fns";
 
-import Tada from "react-reveal/Tada";
-
 import One from "../../images/1.png";
 import Two from "../../images/2.png";
 import Three from "../../images/3.png";
