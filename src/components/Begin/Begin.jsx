@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Begin.css";
 
-const Begin = () => {
+const Begin = ({ history }) => {
   return (
     <div className="begin">
       <h3>Begin your one of a kind apprenticeship</h3>
@@ -14,4 +14,4 @@ const Begin = () => {
   );
 };
 
-export default Begin;
+export default withRouter(Begin);
