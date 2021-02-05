@@ -17,7 +17,6 @@ import Header from "./components/Header/Header";
 import Last from "./components/Last/Last";
 import Process from "./components/Process/Process";
 import Steps from "./components/Steps";
-import Form from "./components/Form";
 import SignupPage from "./components/signupPage";
 
 function App() {
