@@ -8,7 +8,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename="/#">
+    <HashRouter>
       <ChakraProvider>
         <App />
       </ChakraProvider>
