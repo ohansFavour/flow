@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { NotificationContainer } from "react-notifications";
 
 import "react-notifications/lib/notifications.css";
