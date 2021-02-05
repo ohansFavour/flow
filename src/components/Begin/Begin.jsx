@@ -1,16 +1,17 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 import "./Begin.css";
 
-const Begin = () => {
+const Begin = ({ history }) => {
   return (
     <div className="begin">
       <h3>Begin your one of a kind apprenticeship</h3>
-      <a href="/signup">
+      <span onClick={() => history.push("/signup")}>
         <button>Sign up now</button>
-      </a>
+      </span>
     </div>
   );
 };
 
-export default Begin;
+export default withRouter(Begin);

@@ -18,6 +18,7 @@ import Last from "./components/Last/Last";
 import Process from "./components/Process/Process";
 import Steps from "./components/Steps";
 import Form from "./components/Form";
+import SignupPage from "./components/signupPage";
 
 function App() {
   return (
@@ -38,10 +39,7 @@ function App() {
           </div>
         </Route>
         <Route exact path="/signup">
-          <div className="AppForm">
-            <Header notHome={true} />
-            <Form />
-          </div>
+          <SignupPage />
         </Route>
       </Switch>
 

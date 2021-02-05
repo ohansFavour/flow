@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Image,
-  Heading,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, FormControl, FormLabel } from "@chakra-ui/react";
 
 const Signup = () => {
   return (
@@ -20,7 +10,7 @@ const Signup = () => {
       <Flex w="100%" maxW="500px">
         <FormControl id="contact-name">
           <FormLabel>Name</FormLabel>
-          <Input type="name" />
+          {/* <Input type="name" /> */}
         </FormControl>
       </Flex>
     </Box>

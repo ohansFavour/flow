@@ -12,7 +12,7 @@
         <add extension=".js" policy="CacheUntilChange" kernelCachePolicy="CacheUntilChange" />
         <add extension=".svg" policy="CacheUntilChange" kernelCachePolicy="CacheUntilChange" />
         <add extension=".png" policy="CacheUntilChange" kernelCachePolicy="CacheUntilChange" />
-      </profiles>
+     </profiles>
     </caching>
     <rewrite>
       <rules>
