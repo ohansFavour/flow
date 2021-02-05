@@ -334,9 +334,12 @@ const Form = ({ history }) => {
               if (disable) {
                 e.preventDefault();
                 if (number.trim() !== confirmNumber.trim()) {
-                  alert("Please confirm your phone number");
+                  NotificationManager.error("An error occured.", "Error");
                 } else {
-                  alert("Please fill required fields");
+                  NotificationManager.error(
+                    "Please fill required fields.",
+                    "Error"
+                  );
                 }
               } else {
                 handleSubmit(e);

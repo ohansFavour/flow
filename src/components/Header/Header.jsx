@@ -27,11 +27,13 @@ const Header = ({ notHome, history }) => {
               <div className="header__logo ">
                 {/* <a> */}
                 <span>
-                  <img
-                    src={y > 15 ? Logo : WhiteLogo}
-                    alt="logo"
-                    onClick={() => history.push("/")}
-                  />
+                  <Link to="/">
+                    <img
+                      src={y > 15 ? Logo : WhiteLogo}
+                      alt="logo"
+                      onClick={() => history.push("/")}
+                    />
+                  </Link>
                 </span>
                 {/* </a> */}
                 {/* <em>Coming Soon</em> */}
@@ -58,11 +60,13 @@ const Header = ({ notHome, history }) => {
               <div className="header__logo header__vertical">
                 {/* <a> */}
                 <span>
-                  <img
-                    src={Logo}
-                    alt="logo"
-                    onClick={() => history.push("/signup")}
-                  />
+                  <Link to="/">
+                    <img
+                      src={Logo}
+                      alt="logo"
+                      onClick={() => history.push("/signup")}
+                    />
+                  </Link>
                 </span>
                 {/* </a> */}
                 {/* <em>Coming Soon</em> */}

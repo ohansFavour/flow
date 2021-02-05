@@ -7,7 +7,7 @@ const Begin = ({ history }) => {
   return (
     <div className="begin">
       <h3>Begin your one of a kind apprenticeship</h3>
-      <Link href="/signup">
+      <Link to="/signup">
         <button>Sign up now</button>
       </Link>
     </div>
