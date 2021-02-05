@@ -1,5 +1,6 @@
 import React from "react";
 import { Scroll } from "react-fns";
+import { Link } from "react-router-dom";
 
 import One from "../../images/1.png";
 import Two from "../../images/2.png";
@@ -155,9 +156,9 @@ const TestVid = () => {
                   Combine online and offline learning to acquire your desired
                   vocational skill at your own pace.
                 </p>
-                <a href="/signup">
+                <Link to="/signup">
                   <button>Get Started</button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

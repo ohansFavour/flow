@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Scroll } from "react-fns";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import "./Header.css";
 
@@ -37,12 +37,12 @@ const Header = ({ notHome, history }) => {
                 {/* <em>Coming Soon</em> */}
               </div>
               <div className="header__options">
-                <a href="/">
+                <Link to="/">
                   <span>Home</span>
-                </a>
-                <a href="/signup">
+                </Link>
+                <Link to="/signup">
                   <span>Sign Up</span>
-                </a>
+                </Link>
               </div>
             </div>
           );
@@ -68,12 +68,12 @@ const Header = ({ notHome, history }) => {
                 {/* <em>Coming Soon</em> */}
               </div>
               <div className="header__options">
-                <a href="/" className="header__vertical">
+                <Link to="/" className="header__vertical">
                   <span>Home</span>
-                </a>
-                <a href="/signup">
+                </Link>
+                <Link to="/signup">
                   <span>Sign Up</span>
-                </a>
+                </Link>
               </div>
             </div>
           );
