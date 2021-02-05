@@ -7,9 +7,9 @@ const Begin = ({ history }) => {
   return (
     <div className="begin">
       <h3>Begin your one of a kind apprenticeship</h3>
-      <span onClick={() => history.push("/signup")}>
+      <a href="/signup">
         <button>Sign up now</button>
-      </span>
+      </a>
     </div>
   );
 };
