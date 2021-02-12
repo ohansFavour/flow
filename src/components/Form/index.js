@@ -15,6 +15,7 @@ const Form = ({ history }) => {
   const [enableOtherTitle, setEnableOtherTitle] = useState(false);
   const [enableOtherSkill, setEnableOtherSkill] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState(null);
 
   const disable = !name || !skill || !number || !confirmNumber;
   const confirmNumberAlert = !!(
@@ -76,7 +77,9 @@ const Form = ({ history }) => {
     <div className="form-container">
       <LoadingBar ref={ref} color="black" />
       <h1>Sign Up</h1>
+
       <form className="form">
+        {errors && <div className="form__error">{errors}</div>}
         <p className="required">Please provide your name ?</p>
         <input
           type="name"
@@ -333,15 +336,19 @@ const Form = ({ history }) => {
             onClick={(e) => {
               if (disable) {
                 e.preventDefault();
-                if (number.trim() !== confirmNumber.trim()) {
-                  NotificationManager.error("An error occured.", "Error");
-                } else {
-                  NotificationManager.error(
-                    "Please fill required fields.",
-                    "Error"
-                  );
+                window.scrollTo(0, 0);
+
+                if (!name) {
+                  setErrors("Please provide your name.");
+                } else if (!skill) {
+                  setErrors("Please select a skill.");
+                } else if (!number) {
+                  setErrors("Please provide your Phone number.");
+                } else if (number.trim() !== confirmNumber.trim()) {
+                  setErrors("Your Phone numbers don't match");
                 }
               } else {
+                setErrors(null);
                 handleSubmit(e);
               }
             }}

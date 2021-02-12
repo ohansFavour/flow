@@ -102,3 +102,19 @@
   width: calc(100% - 20px);
   // border: solid red 1px;
 }
+
+.form__error {
+  color: red;
+  font-size: 1em;
+  margin-bottom: 20px;
+  font-style: oblique;
+  border: solid red 1px;
+  background-color: rgba(249, 219, 219, 255);
+  padding: 15px;
+  border-radius: 3px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}
