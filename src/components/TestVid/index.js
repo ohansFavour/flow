@@ -9,7 +9,7 @@ import Four from "../../images/4.png";
 import Five from "../../images/5.png";
 import Six from "../../images/6.png";
 
-import Vid from "../../videos/learn-work.mp4";
+import Poster from "../../images/vocation.png";
 import "./testVid.scss";
 
 const TestVid = () => {
@@ -37,6 +37,7 @@ const TestVid = () => {
               muted
               loop
               id="myVideo"
+              poster={Poster}
               style={{
                 width: `calc((-1 * 100% * ${y} / 300 ) + 100%)`,
                 height: `calc((-1 * 100% * ${y} / 300 ) + 100%)`,
