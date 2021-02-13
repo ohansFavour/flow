@@ -44,7 +44,10 @@ const TestVid = () => {
                 top: `${y > 500 ? y : "50%"}`,
               }}
             >
-              <source src={Vid} type="video/mp4" />
+              <source
+                src="https://learn-work-now.s3.amazonaws.com/rain.mp4"
+                type="video/mp4"
+              />
               Your browser does not support HTML5 video.
             </video>
             <div
