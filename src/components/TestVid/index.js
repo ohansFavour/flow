@@ -46,7 +46,7 @@ const TestVid = () => {
               }}
             >
               <source
-                src="https://learn-work-now.s3.amazonaws.com/rain.mp4"
+                src="https://learn-work-now.s3.amazonaws.com/learn-work.mp4"
                 type="video/mp4"
               />
               Your browser does not support HTML5 video.
