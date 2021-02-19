@@ -56,18 +56,15 @@ const Form = ({ history }) => {
         }
       );
       setLoading(false);
-      NotificationManager.success(
-        "Your details have been successfully submitted. Our program advisor would contact you shortly.",
-        "Success",
-        7000
-      );
-
       ref.current.complete();
-      history.push("/");
+      history.push("/registration-complete");
     } catch (e) {
       setLoading(false);
       ref.current.complete();
-      NotificationManager.error("An error occured.", "Error");
+      NotificationManager.error(
+        "An error occured, please try again later.",
+        "Error"
+      );
     }
   };
 

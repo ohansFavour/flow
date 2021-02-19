@@ -18,6 +18,7 @@ import Last from "./components/Last/Last";
 import Process from "./components/Process/Process";
 import Steps from "./components/Steps";
 import SignupPage from "./components/signupPage";
+import SuccessfulRegisteration from "./components/SuccessfulRegisteration";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/signup">
           <SignupPage />
+        </Route>
+        <Route exact path="/registration-complete">
+          <SuccessfulRegisteration />
         </Route>
       </Switch>
 

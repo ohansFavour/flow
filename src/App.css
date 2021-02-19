@@ -1,5 +1,6 @@
 .App {
   background: url("./images/Dotted cercles (16).png");
+  min-height: 100vh;
 }
 body,
 html {
