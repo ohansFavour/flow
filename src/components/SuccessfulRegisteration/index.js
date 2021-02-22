@@ -1,10 +1,10 @@
-import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react";
-import React from "react";
-import { Link } from "react-router-dom";
-import Header from "../Header/Header";
-import "./successfulRegisteration.scss";
+import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
+import './successfulRegisteration.scss';
 
-import Success from "../../images/success.png";
+import Success from '../../images/success.png';
 
 const SuccessfulRegisteration = () => {
   return (
@@ -15,7 +15,7 @@ const SuccessfulRegisteration = () => {
         margin="auto"
         mt="70px"
         direction="column"
-        width={["100%", "80%"]}
+        width={['100%', '80%']}
         textAlign="center"
         alignItems="center"
       >
@@ -27,16 +27,17 @@ const SuccessfulRegisteration = () => {
           maxH="300px"
           objectFit="contain"
         />
-        <Heading fontSize={["1.2em", "1.5em"]} my={8}>
+        <Heading fontSize={['1.2em', '1.5em']} my={8}>
           Thanks for successfully signing up to LearnWorkNow.ng
         </Heading>
-        <Text w={"80%"}>
-          Our program advisors would contact you shortly to enable develop a
-          custom program and schedule for you. You may wish to return to the
-          <Link to="/" style={{ color: "blue" }}>
-            {" "}
+        <Text w={'80%'}>
+          Our program advisors would contact you shortly to enable us develop a
+          custom learning schedule and program for you. You may wish to return
+          to the
+          <Link to="/" style={{ color: 'blue' }}>
+            {' '}
             home page
-          </Link>{" "}
+          </Link>{' '}
           .
         </Text>
       </Flex>
