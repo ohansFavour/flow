@@ -1,17 +1,17 @@
-import React, { useState, useRef } from "react";
-import LoadingBar from "react-top-loading-bar";
-import { withRouter } from "react-router-dom";
-import { NotificationManager } from "react-notifications";
+import React, { useState, useRef } from 'react';
+import LoadingBar from 'react-top-loading-bar';
+import { withRouter } from 'react-router-dom';
+import { NotificationManager } from 'react-notifications';
 
-import "./form.scss";
+import './form.scss';
 
 const Form = ({ history }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [title, setTitle] = useState("");
-  const [skill, setSkill] = useState("");
-  const [number, setNumber] = useState("");
-  const [confirmNumber, setConfirmNumber] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [title, setTitle] = useState('');
+  const [skill, setSkill] = useState('');
+  const [number, setNumber] = useState('');
+  const [confirmNumber, setConfirmNumber] = useState('');
   const [enableOtherTitle, setEnableOtherTitle] = useState(false);
   const [enableOtherSkill, setEnableOtherSkill] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -41,29 +41,29 @@ const Form = ({ history }) => {
     ref.current.continuousStart();
     e.preventDefault();
     const formData = new FormData();
-    formData.append("Name", name);
-    formData.append("Title", title);
-    formData.append("Skill", skill);
-    formData.append("Phone", number);
-    formData.append("Email", email);
+    formData.append('Name', name);
+    formData.append('Title', title);
+    formData.append('Skill', skill);
+    formData.append('Phone', number);
+    formData.append('Email', email);
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbzb9rbKlX1AG6b3FYY4gmezT6hvZxx-63sIoz5FQlQtqsWhqIM/exec",
+        'https://script.google.com/macros/s/AKfycbzb9rbKlX1AG6b3FYY4gmezT6hvZxx-63sIoz5FQlQtqsWhqIM/exec',
         {
-          method: "POST",
+          method: 'POST',
           body: formData,
         }
       );
       setLoading(false);
       ref.current.complete();
-      history.push("/registration-complete");
+      history.push('/registration-complete');
     } catch (e) {
       setLoading(false);
       ref.current.complete();
       NotificationManager.error(
-        "An error occured, please try again later.",
-        "Error"
+        'An error occured, please try again later.',
+        'Error'
       );
     }
   };
@@ -77,14 +77,14 @@ const Form = ({ history }) => {
 
       <form className="form">
         {errors && <div className="form__error">{errors}</div>}
-        <p className="required">Please provide your name ?</p>
+        <p className="required">Provide your name ?</p>
         <input
           type="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
 
-        <p>Please provide your email ?</p>
+        <p>Provide your email ?</p>
         <input
           type="email"
           value={email}
@@ -92,7 +92,7 @@ const Form = ({ history }) => {
         />
         <br />
 
-        <p>Please how would you like to be addressed ?</p>
+        <p>How would you like to be addressed ?</p>
         <br />
         <input
           type="radio"
@@ -129,7 +129,7 @@ const Form = ({ history }) => {
             value="other"
             onChange={(e) => {
               if (e.target.checked) {
-                setTitle("");
+                setTitle('');
                 setEnableOtherTitle(true);
               } else {
                 setEnableOtherTitle(false);
@@ -141,7 +141,7 @@ const Form = ({ history }) => {
             <input
               type="name"
               className="otherOption"
-              value={enableOtherTitle ? title : ""}
+              value={enableOtherTitle ? title : ''}
               onChange={(e) => {
                 if (enableOtherTitle) {
                   setTitle(e.target.value);
@@ -282,7 +282,7 @@ const Form = ({ history }) => {
             onChange={(e) => {
               if (e.target.checked) {
                 setEnableOtherSkill(true);
-                setSkill("");
+                setSkill('');
               } else {
                 setEnableOtherSkill(false);
               }
@@ -294,7 +294,7 @@ const Form = ({ history }) => {
             <input
               type="name"
               className="otherOption"
-              value={enableOtherSkill ? skill : ""}
+              value={enableOtherSkill ? skill : ''}
               onChange={(e) => {
                 if (enableOtherSkill) {
                   setSkill(e.target.value);
@@ -304,7 +304,7 @@ const Form = ({ history }) => {
           </div>
         </div>
         <br />
-        <p className="required">Please provide your Phone Number</p>
+        <p className="required">Provide your Phone Number</p>
         <br />
         <input
           type="number"
@@ -315,7 +315,7 @@ const Form = ({ history }) => {
         />
         <br />
 
-        <p className="required">Please confirm your Phone Number</p>
+        <p className="required">Confirm your Phone Number</p>
         <br />
         <input
           type="number"
@@ -324,7 +324,7 @@ const Form = ({ history }) => {
             setConfirmNumber(e.target.value);
           }}
           style={{
-            borderBottomColor: `${confirmNumberAlert ? "red" : "black"}`,
+            borderBottomColor: `${confirmNumberAlert ? 'red' : 'black'}`,
           }}
         />
         <div className="footer">
@@ -336,11 +336,11 @@ const Form = ({ history }) => {
                 window.scrollTo(0, 0);
 
                 if (!name) {
-                  setErrors("Please provide your name.");
+                  setErrors('Provide your name.');
                 } else if (!skill) {
-                  setErrors("Please select a skill.");
+                  setErrors('Select a skill.');
                 } else if (!number) {
-                  setErrors("Please provide your Phone number.");
+                  setErrors('Provide your Phone number.');
                 } else if (number.trim() !== confirmNumber.trim()) {
                   setErrors("Your Phone numbers don't match");
                 }
