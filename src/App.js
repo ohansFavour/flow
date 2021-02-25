@@ -20,13 +20,32 @@ import Process from './components/Process/Process';
 import Steps from './components/Steps';
 import SignupPage from './components/signupPage';
 import SuccessfulRegisteration from './components/SuccessfulRegisteration';
+import Tracker from './components/Tracker';
 
-const TRACKING_ID = 'UA-190288342-2'; // YOUR_OWN_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
+const TRACKING_ID_NG = 'UA-190288342-2'; // www.learnworknow.ng
+const TRACKING_ID_COM = 'UA-190288342-1'; // www.learnworknow.com
+
+ReactGA.initialize(
+  [
+    {
+      trackingId: TRACKING_ID_NG,
+      gaOptions: {
+        name: 'tracker1',
+        userId: 123,
+      },
+    },
+    {
+      trackingId: TRACKING_ID_COM,
+      gaOptions: { name: 'tracker2' },
+    },
+  ],
+  { debug: true, alwaysSendToDefaultTracker: false }
+);
 
 function App() {
   return (
     <div className="AppMain">
+      <Tracker />
       <NotificationContainer />
       <Switch>
         <Route exact path="/">

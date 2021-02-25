@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import LoadingBar from 'react-top-loading-bar';
 import { withRouter } from 'react-router-dom';
 import { NotificationManager } from 'react-notifications';
+import ReactGA from 'react-ga';
 
 import './form.scss';
 
@@ -57,10 +58,24 @@ const Form = ({ history }) => {
       );
       setLoading(false);
       ref.current.complete();
+      ReactGA.event(
+        {
+          category: 'User',
+          action: 'User signed up',
+        },
+        ['tracker1', 'tracker2']
+      );
       history.push('/registration-complete');
     } catch (e) {
       setLoading(false);
       ref.current.complete();
+      ReactGA.exception(
+        {
+          description: 'An error ocurred while signing up',
+          fatal: true,
+        },
+        ['tracker1', 'tracker2']
+      );
       NotificationManager.error(
         'An error occured, please try again later.',
         'Error'
