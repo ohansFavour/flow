@@ -5,6 +5,7 @@ import { NotificationManager } from 'react-notifications';
 import ReactGA from 'react-ga';
 
 import './form.scss';
+import { Flex, Heading, Text } from '@chakra-ui/react';
 
 const Form = ({ history }) => {
   const [name, setName] = useState('');
@@ -88,7 +89,15 @@ const Form = ({ history }) => {
   return (
     <div className="form-container">
       <LoadingBar ref={ref} color="black" />
-      <h1>Sign Up</h1>
+      <Flex direction={{ base: 'column' }} pl="10%" pr="20px" mb={6}>
+        <Heading mr={1} mb={1}>
+          Sign Up{' '}
+        </Heading>
+        <Text fontWeight="bold">
+          ( Currently available to residents on Lekki-Ajah axis, Lagos,
+          Nigeria.)
+        </Text>
+      </Flex>
 
       <form className="form">
         {errors && <div className="form__error">{errors}</div>}

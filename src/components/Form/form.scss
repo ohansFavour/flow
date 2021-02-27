@@ -27,7 +27,7 @@
     margin-bottom: 20px;
   }
   br {
-    content: "";
+    content: '';
     margin: 2em;
     display: block;
     font-size: 34%;
@@ -36,7 +36,7 @@
     outline: 0;
   }
 
-  input[type="radio"] {
+  input[type='radio'] {
     margin-right: 7px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -47,18 +47,18 @@
     cursor: pointer;
     border-radius: 50%;
   }
-  input[type="radio"]:checked {
+  input[type='radio']:checked {
     background-color: rgba(0, 0, 0, 1);
     border: solid rgba(0, 0, 0, 1) 1px;
   }
 
-  input[type="name"],
-  input[type="email"] {
+  input[type='name'],
+  input[type='email'] {
     margin-bottom: 30px;
   }
-  input[type="name"],
-  input[type="number"],
-  input[type="email"] {
+  input[type='name'],
+  input[type='number'],
+  input[type='email'] {
     border-bottom: solid black 1px;
     background-color: transparent;
     padding-left: 5px;
@@ -89,7 +89,7 @@
 }
 
 .required:after {
-  content: " *";
+  content: ' *';
   color: red;
 }
 
@@ -118,3 +118,22 @@
     padding: 10px;
   }
 }
+
+// .signup-form-header {
+//   display: flex;
+//   span {
+//     font-weight: bold;
+//   }
+//   margin-bottom: 30px;
+
+//   @media screen and (max-width: 768px) {
+//     flex-direction: column;
+//   }
+//   @media screen and (min-width: 768px) {
+//     align-items: center;
+//     h1 {
+//       line-height: 1;
+//       margin-bottom: 0;
+//     }
+//   }
+// }
